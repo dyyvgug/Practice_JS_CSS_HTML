@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vue EXAMPLE</title>
+        <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p>origin string: {{message}}</p>
+            <p>reversed string after processing: {{reversedMessage}}</p>
+        </div>
+
+        <script>
+            var vm = new Vue(
+                {
+                    el: '#app',
+                    data: {
+                        message: 'Lalala'
+                    },
+                    computed:{
+                        reversedMessage: function(){
+                            return this.message.split('').reverse().join('')
+                        }
+                    }
+                }
+            )
+        </script>
+    </body>
+</html>
