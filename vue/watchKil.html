@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Vue EXAMPLE</title>
+        <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js">
+        </script>
+    </head>
+    <body>
+        <div id="computed_props">
+            kilometers : <input type="text" v-model="kilometers">
+            meters : <input type="text" v-model="meters">
+        </div>
+        <p id="info"></p>
+        <script type="text/javascript">
+            var vm = new Vue({
+                el: '#computed_props',
+                data: {
+                    kilometers:0,
+                    meters:0
+                },
+                methods: {},
+                computed:{},
+                watch:{
+                    kilometers:function(val){
+                        this.kilometers = val;
+                        this.meters = this.kilometers * 1000
+                    },
+                    meters:function(val){
+                        this.kilometers = val/1000;
+                        this.meters = val;
+                    }
+                }
+            });
+            // $watch is a instance method
+            vm.$watch('kilometers',function(newValue,oldValue){
+                // callback
+                document.getElementById("info").innerHTML = "the value before modification:" + oldValue + ",the modified value is: "+newValue;
+            })
+        </script>
+    </body>
+</html>
