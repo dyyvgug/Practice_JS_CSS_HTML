@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS</title>
+    </head>
+
+    <body>
+        <p>Assuming y = 5, calculating x = y + 2, and display result.</p>
+        <button onclick="cal()">click here</button>
+        <p id="demo"></p>
+        <script>
+            function cal(){
+                var y = 5;
+                var x = y + 2;
+                var demoP=document.getElementById("demo");
+                demoP.innerHTML="x=" + x;
+            }
+        </script>
+        
+    </body>
+</html>
