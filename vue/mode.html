@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    <div id="Vue">
+        <input type="text" v-model="my_data" />
+        <button v-on:click="clickButton">Click Me</button>
+        <p>{{my_data}}</p>
+    </div>
+</body>
+<script type="text/javascript">
+    var myVue = new Vue({
+        el:'#Vue',
+        data:{
+            my_data: "test",
+            my_hidden: "hidden"
+        },
+        methods:{
+            clickButton:function(){
+                this.my_data = "Wow! I'm changed!"
+            }
+        }
+    })
+</script>
+</html>
