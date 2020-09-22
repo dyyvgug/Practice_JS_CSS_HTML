@@ -1,0 +1,15 @@
+#!/bin/sh
+basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+
+case `uname` in
+    *CYGWIN*) basedir=`cygpath -w "$basedir"`;;
+esac
+
+if [ -x "$basedir//bin/sh" ]; then
+  "$basedir//bin/sh"  "$basedir/C:/Users/dyyvg/AppData/Local/Yarn/Data/global/node_modules/.bin/vue" "$@"
+  ret=$?
+else 
+  /bin/sh  "$basedir/C:/Users/dyyvg/AppData/Local/Yarn/Data/global/node_modules/.bin/vue" "$@"
+  ret=$?
+fi
+exit $ret
