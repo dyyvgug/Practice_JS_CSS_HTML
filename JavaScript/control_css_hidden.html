@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>control_css_hidden</title>
+</head>
+
+<body>
+
+
+<div id="box" style="border:15px solid rgb(112, 122, 214); height:300px;width:300px;display:none" ></div>
+
+<input name="" type="button"  value="Click here to display"  id="btn" onclick="btn()"  style="position:absolute; left:320px; top:10px;">
+
+
+</body>
+<script type="text/javascript">
+var btn1=document.getElementById('btn');
+var box1=document.getElementById('box');
+function btn(){ if(btn1.value=="Click here to hidden"){box1.style.display='none';btn1.value="Click here to display";
+ }else{box1.style.display='';btn1.value="Click here to hidden";
+}
+}
+</script>
+</html>

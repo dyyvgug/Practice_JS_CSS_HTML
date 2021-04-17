@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" http-equiv="content-type" content="text/html">
+        <title>Js_control_CSS</title>
+    </meta>
+    <script type="text/javascript">
+        window.onload=function(){
+                var fbox = document.getElementById("box1");
+                //Take the function with id named box1 from CSS into JS.
+                fbox.style = "color:red";
+                fbox.style.width='200px';
+                fbox.style.backgroundColor='yellow';
+                var fbox2 = document.getElementById("box2");
+                fbox2.style.display = 'none';
+                var fbox3 = document.getElementById("box3");
+                fbox3.style.visibility = 'hidden';
+            }
+        function batch(){
+            document.getElementById('sy1').className='solid';
+            document.getElementById('sy2').className='solid';
+        }
+     </script>
+     <style type="text/css">
+        .solid{
+            width: 200px;
+			background-color: #ccc;
+        }
+     </style>
+</head>
+
+<body>
+ <div id='box1'>11111111111111</div>
+ <div id="box2">22222222222222</div>
+ <div>33333333333333</div>
+ <div id="box3">44444444444444</div>
+ <div id="sy1">55555555555555</div>
+ <div id="sy2">66666666666666</div>
+ <input type="button" name="a" value="Click here" onclick="batch();">
+</body>
+
+</html>
