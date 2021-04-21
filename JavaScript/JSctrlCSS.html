@@ -15,16 +15,29 @@
                 fbox2.style.display = 'none';
                 var fbox3 = document.getElementById("box3");
                 fbox3.style.visibility = 'hidden';
+
             }
         function batch(){
             document.getElementById('sy1').className='solid';
             document.getElementById('sy2').className='solid';
         }
+
      </script>
      <style type="text/css">
         .solid{
             width: 200px;
 			background-color: #ccc;
+            /*display: none;*/
+        }
+        .hidden{
+            color: coral;
+        }
+        .display{
+            color: blueviolet;
+        }
+        #text{
+        color: rgb(24, 224, 224);
+        display: none;
         }
      </style>
 </head>
@@ -36,7 +49,12 @@
  <div id="box3">44444444444444</div>
  <div id="sy1">55555555555555</div>
  <div id="sy2">66666666666666</div>
+ <p id="b1" onmouseover="mouseOver()" onmouseout="mouseOut()">77777777777777</p>
  <input type="button" name="a" value="Click here" onclick="batch();">
+ <input type="image" src="./1.png" style="height: 200px; width: 200px; position: absolute; left: 0px; top: 300px;" onmousemove="document.getElementById('text').style.display='block';" onmouseout="document.getElementById('text').style.display='none';"/>
+ <div id="text">88888888888888</div>
+
+</div>
 </body>
 
 </html>
