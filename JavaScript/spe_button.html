@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link rel="stylesheet" type="text/css" href="" />
+<script type="text/javascript" src="btn.js"></script>
+<style type="text/css" media="screen">
+body { padding: 20px; font-size: 0.85em; font-family: georgia, serif; }
+.btn { display: block; position: relative; background: #aaa; padding: 5px; float: left; color: #fff; text-decoration: none; cursor: pointer; }
+.btn * { font-style: normal; background-image: url(btn2.png); background-repeat: no-repeat; display: block; position: relative; }
+.btn i { background-position: top left; position: absolute; margin-bottom: -5px;  top: 0; left: 0; width: 5px; height: 5px; }
+.btn span { background-position: bottom left; left: -5px; padding: 0 0 5px 10px; margin-bottom: -5px; }
+.btn span i { background-position: bottom right; margin-bottom: 0; position: absolute; left: 100%; width: 10px; height: 100%; top: 0; }
+.btn span span { background-position: top right; position: absolute; right: -10px; margin-left: 10px; top: -5px; height: 0; }
+* html .btn span,
+* html .btn i { float: left; width: auto; background-image: none; cursor: pointer; }
+.btn.blue { background: #2ae; }
+.btn.green { background: #9d4; }
+.btn.pink { background: #e1a; }
+.btn:hover { background-color: #a00; }
+.btn:active { background-color: #444; }
+.btn[class] {  background-image: url(shade.png); background-position: bottom; }
+* html .btn { border: 3px double #aaa; }
+* html .btn.blue { border-color: #2ae; }
+* html .btn.green { border-color: #9d4; }
+* html .btn.pink { border-color: #e1a; }
+* html .btn:hover { border-color: #a00; }
+p { clear: both; padding-bottom: 2em; }
+form { margin-top: 2em; }
+form p .btn { margin-right: 1em; }
+textarea { margin: 1em 0;}
+  </style>
+</head>
+<body>
+ <p><a href="#" class="btn blue">This is a blue button</a></p>
+ <p><a href="#" class="btn green">This should be a green button</a></p>
+ <p><big><a href="#" class="btn blue big">Big Text</a></big></p>
+ <form method="post" action="#">
+ <fieldset>
+ <legend>Form Example</legend>
+ <div><input type="text" /></div>
+ <div><textarea cols="40" rows="10"></textarea></div>
+ <p><input type="Button" id="reset_btn" value="Reset" class="btn" /> <input type="Submit" id="submit_btn" value="Submit this form" class="btn pink" /></p>
+ </fieldset>
+ </form>
+</body>
+</html>
