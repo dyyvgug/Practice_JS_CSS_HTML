@@ -21,8 +21,8 @@
             document.getElementById('sy1').className='solid';
             document.getElementById('sy2').className='solid';
         }
-
      </script>
+
      <style type="text/css">
         .solid{
             width: 200px;
@@ -39,6 +39,12 @@
         color: rgb(24, 224, 224);
         display: none;
         }
+        #second{
+            display: none;
+        }
+        #pic{
+            display: none;
+        }
      </style>
 </head>
 
@@ -49,10 +55,19 @@
  <div id="box3">44444444444444</div>
  <div id="sy1">55555555555555</div>
  <div id="sy2">66666666666666</div>
+ <!--mouse incident-->
  <p id="b1" onmouseover="mouseOver()" onmouseout="mouseOut()">77777777777777</p>
- <input type="button" name="a" value="Click here" onclick="batch();">
+ <input type="button" name="a" value="Click here" onclick="batch();"/>
  <input type="image" src="./1.png" style="height: 200px; width: 200px; position: absolute; left: 0px; top: 300px;" onmousemove="document.getElementById('text').style.display='block';" onmouseout="document.getElementById('text').style.display='none';"/>
  <div id="text">88888888888888</div>
+ <!--button link button test-->
+ <input type="button" value="next" onclick="document.getElementById('second').style.display='block';"/>
+ <div id="second">
+     <input type="button" value="display picture" onclick="document.getElementById('pic').style.display='block';"/>
+ </div>
+ <div id="pic">
+     <img src="./1.png"/>
+ </div>
 
 </div>
 </body>
