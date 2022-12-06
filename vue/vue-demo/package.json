@@ -19,7 +19,7 @@
     "cross-env": "^1.0.6",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.4",
-    "surge": "^0.18.0",
+    "surge": "^0.23.1",
     "vue-loader": "^9.0.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
